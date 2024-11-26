@@ -56,9 +56,3 @@ Here's how a `.script` file looks with the highlighter:
 ## **Feedback and Contributions**
 - If you find any bugs or have suggestions, feel free to open an issue on the [GitHub Issues](#) page.
 - Contributions are welcome! Fork the repo, make your changes, and submit a pull request.
-
----
-
-Feel free to adjust this template further, especially adding the real GitHub URL and making sure the screenshot path (`image.png`) works in your repository. This guide should make it easy for users to install and understand your extension!
-
-![Showing an image of the syntax highlighter](image.png)
