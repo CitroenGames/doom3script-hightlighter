@@ -1,7 +1,3 @@
-This is a great start for your guide! To make it more user-friendly and polished, you can expand it slightly and structure it better. Here's a revised version:
-
----
-
 # **Doom 3 Script Highlighter**
 
 This Visual Studio Code extension provides syntax highlighting and basic auto-completion for Doom 3 scripts (`.script` files). Follow the steps below to install and use it.
