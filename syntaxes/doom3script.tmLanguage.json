@@ -1,0 +1,101 @@
+{
+  "scopeName": "source.doom3script",
+  "fileTypes": [".script"],
+  "patterns": [
+    {
+      "name": "meta.preprocessor.doom3script",
+      "match": "^\\s*(#\\s*define)\\s+([A-Z_][A-Z0-9_]*)\\s+([0-9.-]+|[A-Z_][A-Z0-9_]*|\\([A-Z_][A-Z0-9_]*\\s*[-+*/]\\s*[0-9]+\\))",
+      "captures": {
+        "1": { "name": "keyword.control.directive.doom3script"},
+        "2": { "name": "entity.name.constant.preprocessor.doom3script"},
+        "3": { "name": "constant.other.preprocessor.doom3script"}
+      }
+    },
+    {
+      "name": "meta.preprocessor.doom3script",
+      "match": "(#\\s*(?:ifdef|ifndef|endif|else|elif|undef|pragma))\\b.*",
+      "captures": {
+        "1": { "name": "keyword.control.directive.doom3script"}
+      }
+    },
+    {
+      "name": "meta.class.doom3script",
+      "match": "^\\s*(object)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*:\\s*(ai)\\b",
+      "captures": {
+        "1": { "name": "storage.type.class.doom3script" },
+        "2": { "name": "entity.name.class.doom3script" },
+        "3": { "name": "storage.type.class.doom3script" }
+      }
+    },
+    {
+      "name": "meta.variable.doom3script",
+      "match": "^\\s*(boolean|int|float|string|vector|entity)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*;",
+      "captures": {
+        "1": { "name": "storage.type.doom3script" },
+        "2": { "name": "variable.other.doom3script" }
+      }
+    },
+    {
+      "name": "meta.function.doom3script",
+      "begin": "^\\s*(\\b(?:void|int|float|string|vector|entity|boolean)\\b)\\s+([a-zA-Z_][a-zA-Z0-9_]*(?:::[a-zA-Z_][a-zA-Z0-9_]*)?)",
+      "beginCaptures": {
+        "1": { "name": "storage.type.doom3script" },
+        "2": { "name": "entity.name.function.doom3script" }
+      },
+      "end": "\\{|;",
+      "patterns": [
+        {
+          "begin": "\\(",
+          "end": "\\)",
+          "patterns": [
+            {
+              "match": "\\b(void|int|float|string|vector|entity|boolean)\\b",
+              "name": "storage.type.parameter.doom3script"
+            },
+            {
+              "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b",
+              "name": "variable.parameter.doom3script"
+            },
+            {
+              "match": ",",
+              "name": "punctuation.separator.parameter.doom3script"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "keyword.control.doom3script",
+      "match": "\\b(if|else|while|for|break|continue|return)\\b"
+    },
+    {
+      "name": "storage.type.doom3script",
+      "match": "\\b(void|int|float|string|vector|entity|boolean|object)\\b"
+    },
+    {
+      "name": "variable.language.doom3script",
+      "match": "\\b(this|self)\\b"
+    },
+    {
+      "name": "comment.line.double-slash.doom3script",
+      "begin": "//",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.comment.doom3script" }
+      },
+      "end": "\\n"
+    },
+    {
+      "name": "comment.block.doom3script",
+      "begin": "/\\*",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.comment.doom3script" }
+      },
+      "end": "\\*/",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.comment.doom3script" }
+      }
+    }
+  ],
+  "repository": {},
+  "uuid": "00000000-0000-0000-0000-000000000000"
+}
