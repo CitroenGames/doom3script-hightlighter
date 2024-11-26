@@ -13,14 +13,14 @@ This Visual Studio Code extension provides syntax highlighting and basic auto-co
 1. **Clone the Repository**  
    Clone this repository to your local machine:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/CitroenGames/doom3script-hightlighter
    ```
 
 2. **Open the Project in VS Code**  
    - Navigate to the root directory of the repository using your terminal.  
      Example:
      ```bash
-     cd doom3-script-highlighter
+     cd doom3script-highlighter
      ```
    - Open the project in Visual Studio Code:
      ```bash
